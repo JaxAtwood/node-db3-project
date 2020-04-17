@@ -28,7 +28,7 @@ function findSteps(id) {
 
 function add(scheme) {
     return db("schemes")
-    .insert("scheme")
+    .insert(scheme)
     .then(id => {
         return findById(id)
     })
@@ -36,7 +36,7 @@ function add(scheme) {
 
 function update(changes, id) {
     return db("schemes")
-    .update("changes")
+    .update(changes)
     .where({id})
     .then(resolve => {
         return changes
